@@ -1,0 +1,23 @@
+section.container{
+    background-image: url('images/scroll.png') ;
+    background-size: 100% 110%;               
+    background-position: top center;          
+    background-repeat: no-repeat;
+
+    text-align: center;
+    list-style: none;
+    margin: 0px 20%;
+}
+
+section.container h2{
+    padding-top: 20px;
+    color: white;
+}
+
+section.container p{
+    padding: 0px 20%;
+}
+
+ul{
+    list-style: none;
+}
