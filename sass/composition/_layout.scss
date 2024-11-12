@@ -1,0 +1,41 @@
+section.container{
+    // background-image: url('images/scroll.png') ;
+    // background-size: 100% 110%;               
+    // background-position: top center;          
+    // background-repeat: no-repeat;
+  
+    text-align: center;
+    list-style: none;
+    margin: 10px 20%;
+}
+
+section.container h2{
+    background-color: darkgoldenrod;
+    margin: 0px;
+    padding-top: 20px;
+    color: white;
+    opacity: 1; 
+
+    transition: all 1s;
+    &:hover ~ * {
+        opacity: 1;
+        transform: translateY(10px);
+        transition: all 0.5s;
+      }
+  }
+  
+  section.container > * {
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.5s;
+    background-color: burlywood;
+    margin: 0px;
+}
+
+section.container p{
+    padding: 0px 20%;
+}
+
+ul{
+    list-style: none;
+}
