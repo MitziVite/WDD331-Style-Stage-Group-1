@@ -1,17 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 section.container {
-  background-image: url("images/scroll.png");
-  background-size: 100% 110%;
-  background-position: top center;
-  background-repeat: no-repeat;
   text-align: center;
   list-style: none;
-  margin: 0px 20%;
+  margin: 10px 20%;
 }
 
 section.container h2 {
+  background-color: darkgoldenrod;
+  margin: 0px;
   padding-top: 20px;
   color: white;
+  opacity: 1;
+  transition: all 1s;
+}
+section.container h2:hover ~ * {
+  opacity: 1;
+  transform: translateY(10px);
+  transition: all 0.5s;
+}
+
+section.container > * {
+  opacity: 0;
+  transform: translateY(0);
+  transition: all 0.5s;
+  background-color: burlywood;
+  margin: 0px;
 }
 
 section.container p {
