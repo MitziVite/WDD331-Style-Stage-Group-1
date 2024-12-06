@@ -1,0 +1,14 @@
+.page-footer {
+    background-color: rgb(44, 37, 37);
+    padding: 60px;
+    color: #f8f4e3;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding: 0;
+}
+footer li {
+    width: 33.33%;
+}
