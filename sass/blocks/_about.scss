@@ -1,14 +1,13 @@
-h1{
-    background-image: url('images/fire.gif');
-  
+@import '../global/reset';
+
+h1 {
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-    
 }
-h1::after{
-    content: "is FIRE >:)";
-    display: block; 
-    color: white;   
-    margin-left: 10px; 
+
+h1::after {
+  display: block; 
+  color: $color-text;   
+  margin-left: 10px; 
 }

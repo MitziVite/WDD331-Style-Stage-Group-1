@@ -16,7 +16,7 @@ section.container h2 {
   background-repeat: no-repeat;
   margin: 0px;
   padding-top: 20px;
-  color: white;
+  color: #f8f4e3;
   height: 100%;
   transition: all 1s;
 }
@@ -41,6 +41,26 @@ ul {
   list-style: none;
 }
 
+article .about::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  width: 200px;
+  height: 200px;
+  transform: translateX(-50%);
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 189.864"><path class="flame-main" fill="%23F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465c0,0,3.357,4.969,5.103,9.938c0,0-5.305-21.086,1.712-30.418c7.017-9.333,0.571-35.654-2.25-37.534c0,0,13.07,5.64,19.875,47.54c6.806,41.899,16.831,45.301,6.088,53.985"/><path class="flame-main one" fill="%23F6891F" d="M61.693,122.257c4.117-15.4,12.097-14.487-11.589-60.872c0,0,32.016,10.223,52.601,63.123c20.585,52.899-19.848,61.045-19.643,61.582c0.206,0.537-19.401-0.269-14.835-18.532S57.576,137.656,61.693,122.257z"/><path class="flame-main two" fill="%23FFD04A" d="M81.657,79.192c0,0,11.549,24.845,3.626,40.02c-7.924,15.175-21.126,41.899-0.425,64.998C84.858,184.21,125.705,150.905,81.657,79.192z"/><path class="flame-main three" fill="%23FDBA16" d="M99.92,101.754c0,0-23.208,47.027-12.043,80.072c0,0,32.741-16.073,20.108-45.79C95.354,106.319,99.92,114.108,99.92,101.754z"/><path class="flame-main four" fill="%23F36E21" d="M103.143,105.917c0,0,8.927,30.753-1.043,46.868c-9.969,16.115-14.799,29.041-14.799,29.041S134.387,164.603,103.143,105.917z"/><path class="flame-main five" fill="%23FDBA16" d="M62.049,104.171c0,0-15.645,67.588,10.529,77.655C98.753,191.894,69.033,130.761,62.049,104.171z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: flameWobble 3s linear infinite;
+}
+
+@keyframes flameWobble {
+  50% {
+    transform: translate(-50%, -20px) scale(1.05);
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -60,7 +80,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
-  color: white;
+  color: #f8f4e3;
   position: relative;
   overflow: hidden;
 }
@@ -82,7 +102,7 @@ header::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("/images/atla1.jpeg"), url("/images/atla2.jpg"), url("/images/atla3.jpg"), url("/images/atla4.jpeg");
+  background-image: url("images/atla1.jpeg"), url("images/atla2.jpg"), url("images/atla3.jpg"), url("images/atla4.jpeg");
   background-size: cover;
   background-position: center;
   animation: fireCarousel 20s infinite;
@@ -116,7 +136,7 @@ header .container {
   position: relative;
   z-index: 1;
   left: 4%;
-  background-color: #8f7856c3;
+  background-color: rgba(143, 120, 86, 0.937254902);
 }
 
 header h1 {
@@ -176,7 +196,7 @@ header svg {
   display: inline-block;
   margin-top: 1.5rem;
   background-color: #8b4513;
-  color: #f5f4f1;
+  color: #f8f4e3;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
@@ -201,28 +221,22 @@ header svg {
   header h1 {
     font-size: 2.5rem;
   }
-
   header .container {
     right: 5px;
   }
-
   .container h1 {
     font-size: 1.5rem;
   }
-
   .container h2 {
     font-size: 1rem;
   }
-
   .container p {
     font-size: 0.8rem;
   }
-
   .link-github {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
   }
-
   .skip-link {
     font-size: 0.8rem;
     padding: 0.8rem 1.5rem;
@@ -231,7 +245,6 @@ header svg {
 nav {
   width: 100%;
   background-color: #e8decf;
-  /* Color de fondo que combina con el tema */
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -252,7 +265,6 @@ nav li {
 nav a {
   text-decoration: none;
   color: #5d3b09;
-  /* Color de texto */
   font-weight: bold;
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -271,29 +283,78 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
-
   nav li {
     margin: 0.5rem 0;
   }
-
   nav a {
     width: 100%;
     text-align: center;
   }
 }
 h1 {
-  background-image: url("images/fire.gif");
-  background-size: cover;
-  /* Ensures the image covers the entire element */
-  background-position: center;
-  /* Centers the image */
-  background-repeat: no-repeat;
-  /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 h1::after {
-  content: "is FIRE >:)";
   display: block;
-  color: white;
+  color: #f8f4e3;
   margin-left: 10px;
 }
+
+.profile {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(143, 120, 86, 0.937254902);
+  border: 2px solid #8b4513;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.profile .container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.profile h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f8f4e3;
+  font-family: "Cormorant Garamond", serif;
+}
+.profile ul {
+  list-style: none;
+  padding: 0;
+}
+.profile ul li {
+  margin-bottom: 10px;
+  color: #f8f4e3;
+}
+.profile ul li span {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.profile ul li a {
+  color: #ddcdc1;
+  text-decoration: none;
+}
+.profile ul li a:hover {
+  text-decoration: underline;
+  color: #cb8c51;
+}
+.profile a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ddcdc1;
+  text-decoration: none;
+}
+.profile a:hover {
+  text-decoration: underline;
+  color: #cb8c51;
+}
+
+/*# sourceMappingURL=style.css.map */
