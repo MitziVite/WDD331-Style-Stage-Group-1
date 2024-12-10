@@ -91,19 +91,19 @@ header::after {
 
 @keyframes fireCarousel {
   0%, 20% {
-    background-image: url("/images/atla1.jpeg");
+    background-image: url("images/atla1.jpeg");
     filter: brightness(0.6) contrast(1.2) sepia(0.4);
   }
   25%, 45% {
-    background-image: url("/images/atla2.jpg");
+    background-image: url("images/atla2.jpg");
     filter: brightness(0.7) contrast(1.1) sepia(0.3);
   }
   50%, 70% {
-    background-image: url("/images/atla3.jpg");
+    background-image: url("images/atla3.jpg");
     filter: brightness(0.75) contrast(1.15) sepia(0.35);
   }
   75%, 95% {
-    background-image: url("/images/atla4.jpeg");
+    background-image: url("images/atla4.jpeg");
     filter: brightness(0.65) contrast(1.25) sepia(0.5);
   }
 }
