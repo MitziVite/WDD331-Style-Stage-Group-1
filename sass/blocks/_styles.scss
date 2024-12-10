@@ -1,0 +1,99 @@
+aside {
+    background-color: rgb(44, 37, 37);
+    margin:0;
+    text-align: center;
+    padding: 20px 60px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px 60px;
+    margin: 0;
+   
+
+    li > span {
+        display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            margin:0px;
+            height: 100%;
+            width: 100%;
+    }
+    li span:nth-child(2){
+        background-color: rgba(244, 237, 229, 0.445);
+        padding: 5px;
+            color:#412109;
+            border-radius: 3px;
+            margin-top: 10px;
+    }
+    
+
+    li {
+        border-radius: 3px;
+    }
+
+    li:nth-child(1) {
+            background-image: url('images/elements_lava.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+    li:nth-child(2) {
+            background-image: url('images/elements_metal.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+     li:nth-child(3) {
+            background-image: url('images/elements_lightning.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+    li span a {
+                     background-color: rgba(244, 237, 229, 0.644);
+                     padding: 10px;
+                     color: #8b4513;
+                     border-radius: 3px;
+
+                     &:hover {
+                        background-color: rgb(244, 237, 229);
+                        text-decoration: none;
+                        color: #8b4513;
+                     }
+
+                     span {
+                        padding:0px;
+                     }
+                 }
+
+}
+
+
+.link-allstyles {
+    position: absolute;
+    left:45%;
+    text-align: center;
+    padding:15px;
+    margin-top: 10px;
+    border: rgba(244, 237, 229, 0.644) solid 2px;
+    border-radius: 3px;
+
+    &:hover {
+        background-color:rgb(244, 237, 229);
+    }
+}
+
+#styles {
+    padding-top:60px;
+
+h2 {
+    color:rgb(244, 237, 229);
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+}
+

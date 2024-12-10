@@ -116,7 +116,7 @@ header .container {
   position: relative;
   z-index: 1;
   left: 4%;
-  background-color: #8f7856c3;
+  background-color: rgba(143, 120, 86, 0.7647058824);
 }
 
 header h1 {
@@ -201,28 +201,22 @@ header svg {
   header h1 {
     font-size: 2.5rem;
   }
-
   header .container {
     right: 5px;
   }
-
   .container h1 {
     font-size: 1.5rem;
   }
-
   .container h2 {
     font-size: 1rem;
   }
-
   .container p {
     font-size: 0.8rem;
   }
-
   .link-github {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
   }
-
   .skip-link {
     font-size: 0.8rem;
     padding: 0.8rem 1.5rem;
@@ -230,8 +224,7 @@ header svg {
 }
 nav {
   width: 100%;
-  background-color: #e8decf;
-  /* Color de fondo que combina con el tema */
+  background-color: #e8decf; /* Color de fondo que combina con el tema */
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -251,8 +244,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #5d3b09;
-  /* Color de texto */
+  color: #5d3b09; /* Color de texto */
   font-weight: bold;
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -271,21 +263,170 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
-
   nav li {
     margin: 0.5rem 0;
   }
-
   nav a {
     width: 100%;
     text-align: center;
   }
 }
 h1 {
-  background-size: cover;
-  /* Ensures the image covers the entire element */
-  background-position: center;
-  /* Centers the image */
-  background-repeat: no-repeat;
-  /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
+#files {
+  background-color: gb(44, 37, 37);
+}
+
+aside {
+  background-color: rgb(44, 37, 37);
+  margin: 0;
+  text-align: center;
+  padding: 20px 60px;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px 60px;
+  margin: 0;
+}
+.features li > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+.features li span:nth-child(2) {
+  background-color: rgba(244, 237, 229, 0.445);
+  padding: 5px;
+  color: #412109;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.features li {
+  border-radius: 3px;
+}
+.features li:nth-child(1) {
+  background-image: url("images/elements_lava.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features li:nth-child(2) {
+  background-image: url("images/elements_metal.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features li:nth-child(3) {
+  background-image: url("images/elements_lightning.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features li span a {
+  background-color: rgba(244, 237, 229, 0.644);
+  padding: 10px;
+  color: #8b4513;
+  border-radius: 3px;
+}
+.features li span a:hover {
+  background-color: rgb(244, 237, 229);
+  text-decoration: none;
+  color: #8b4513;
+}
+.features li span a span {
+  padding: 0px;
+}
+
+.link-allstyles {
+  position: absolute;
+  left: 45%;
+  text-align: center;
+  padding: 15px;
+  margin-top: 10px;
+  border: rgba(244, 237, 229, 0.644) solid 2px;
+  border-radius: 3px;
+}
+.link-allstyles:hover {
+  background-color: rgb(244, 237, 229);
+}
+
+#styles {
+  padding-top: 60px;
+}
+#styles h2 {
+  color: rgb(244, 237, 229);
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+
+.page-footer {
+  background-color: rgb(44, 37, 37);
+  padding: 60px;
+  padding-top: 90px;
+  color: #f8f4e3;
+}
+
+.page-footer::before {
+  content: "";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-footer::before {
+  background-image: url("images/water_color.svg"), url("images/earth_color.svg"), url("images/air_color.svg"), url("images/fire_color.svg"), url("images/water_color.svg"), url("images/earth_color.svg"), url("images/air_color.svg"), url("images/fire_color.svg"), url("images/water_color.svg");
+  background-repeat: no-repeat;
+  background-size: 7% auto;
+  background-position: 2% center, 13% center, 25% center, 37% center, 49% center, 61% center, 73% center, 85% center, 97% center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0;
+  padding: 0 10%;
+}
+
+footer li a:link {
+  display: flex;
+  margin: auto;
+  background-color: #8b4513;
+  color: #f5f4f1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+a.link-github {
+  margin: auto;
+}
+
+footer p a:link, footer p a:visited {
+  color: #c5bb9c;
+}
+
+footer p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
