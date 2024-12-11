@@ -1,3 +1,5 @@
+@import '../global/reset';
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ html, body {
 *:after {
   box-sizing: border-box;
 }
+
 header {
   width: 100vw;
   height: 100vh;
@@ -16,7 +19,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
-  color: white;
+  color: $color-text;
   position: relative;
   overflow: hidden;
 
@@ -39,10 +42,10 @@ header {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('/images/atla1.jpeg'),
-                      url('/images/atla2.jpg'),
-                      url('/images/atla3.jpg'),
-                      url('/images/atla4.jpeg');
+    background-image: url('images/atla1.jpeg'),
+                      url('images/atla2.jpg'),
+                      url('images/atla3.jpg'),
+                      url('images/atla4.jpeg');
     background-size: cover;
     background-position: center;
     animation: fireCarousel 20s infinite;
@@ -52,24 +55,20 @@ header {
 
 @keyframes fireCarousel {
   0%, 20% {
-    background-image: url('/images/atla1.jpeg');
+    background-image: url('images/atla1.jpeg');
     filter: brightness(0.6) contrast(1.2) sepia(0.4); 
-
   }
   25%, 45% {
-    background-image: url('/images/atla2.jpg');
+    background-image: url('images/atla2.jpg');
     filter: brightness(0.7) contrast(1.1) sepia(0.3);
-
   }
   50%, 70% {
-    background-image: url('/images/atla3.jpg');
+    background-image: url('images/atla3.jpg');
     filter: brightness(0.75) contrast(1.15) sepia(0.35);
-
   }
   75%, 95% {
-    background-image: url('/images/atla4.jpeg');
+    background-image: url('images/atla4.jpeg');
     filter: brightness(0.65) contrast(1.25) sepia(0.5);
-
   }
 }
 
@@ -82,21 +81,17 @@ header .container {
   position: relative;
   z-index: 1;
   left: 4%;
-  background-color: #8f7856c3;
+  background-color: $color-background;
 }
-
 
 header h1 {
   font-size: 6rem;
   font-family: 'Cormorant Garamond', serif;
 }
 
-
 header svg {
   width: 15px;
 }
-
-
 
 .container h1 {
   font-size: 2.5rem;
@@ -113,27 +108,27 @@ header svg {
 }
 
 .container p {
-  font-size: 1rem
+  font-size: 1rem;
 }
 
-header .container a {
-  color: #ddcdc1;
+.container a {
+  color: $color-link;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .container a:hover {
-  color: #cb8c51;
+  color: $color-link-hover;
   text-decoration: underline;
 }
 
 .skip-link {
   position: absolute;
   top: 4%;
-  left:4%;
-  background-color: #5d3b09;
-  color: #f8f4e3;
+  left: 4%;
+  background-color: $color-nav-text;
+  color: $color-text;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 4px;
@@ -145,8 +140,8 @@ header .container a {
 .link-github {
   display: inline-block;
   margin-top: 1.5rem;
-  background-color: #8b4513;
-  color: #f5f4f1;
+  background-color: $color-github-background;
+  color: $color-text;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
@@ -156,11 +151,11 @@ header .container a {
 }
 
 .link-github:hover {
-  background-color: #5d3b09;
+  background-color: $color-nav-text;
 }
 
 .link-github svg {
-  fill: #f8f4e3;
+  fill: $color-text;
   width: 1rem;
   height: 1rem;
   vertical-align: middle;
@@ -171,8 +166,8 @@ header .container a {
   header h1 {
     font-size: 2.5rem;
   }
-  header .container{
-    right:5px;
+  header .container {
+    right: 5px;
   }
 
   .container h1 {
