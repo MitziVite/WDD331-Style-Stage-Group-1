@@ -1,42 +1,183 @@
-section.container{
-    background-image: url('images/scroll2.png') ;
-    background-size: 100% 110%;            
-    background-position: top center;          
-    background-repeat: no-repeat;
-    text-align: center;
-    list-style: none;
-    margin: 40px 20%;
+// Define a variable for the container's expanded height
+$container-expanded-height: 100%; // Replace with desired height or auto for dynamic content
+
+section.container:has(h2) {
+  background-image: url('images/scroll2.png');
+  background-size: 90% 110%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+  list-style: none;
+  margin: 40px 20%;
+  overflow: hidden; // Prevent content overflow
+  transition: height 0.3s ease; // Smooth height transition
+
+  // Default collapsed state
+  height: 55px; // Small enough to fit only the h2
 }
 
-section.container h2{
-    background-image: url('images/scroll.png') ;
-    background-size: 100% 110%;  
-    background-position: top center;          
-    background-repeat: no-repeat;
-    margin: 0px;
-    padding-top: 20px;
-    color: white;
-    height: 100%;
+/* Ensure the h2 is always visible and triggers the dropdown */
+section.container:has(h2):hover {
+  height: $container-expanded-height; // Expand container height on hover
+}
 
-    transition: all 1s;
-    &:hover ~ * {
-        height: 100px;
-        color: black;
-        transition: all 0.5s;
-      }
+/* Specific rule for the h2 to keep it unaffected */
+section.container h2 {
+  background-image: url('images/scroll.png');
+  background-size: 95% 110%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 15px 0px 15px 10%;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-align: left;
+  cursor: pointer; // Pointer cursor for better UX
+}
+
+// MIGHT DELETE THESE TWO
+
+/* Rule to hide all child elements except h2 initially */
+// section.container > *:not(h2) {
+//   opacity: 0 ;
+//   transition: opacity 0.3s ease;
+// }
+
+// /* Make content visible when hovering over the container */
+// section.container:hover > *:not(h2) {
+//   opacity: 1;
+// }
+
+/* Additional styling for links */
+section.container a {
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  // Show links on hover
+  section.container:hover & {
+    opacity: 1;
   }
-  
-  section.container > * {
-    height: 0px;
-    color: rgba(222, 184, 135, 0);
-    transition: all 0.5s;
-    margin: 0px;
 }
 
-section.container p{
-    padding: 0px 20%;
+section.container p {
+  padding: 0px 20%;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
+
+
+// WATER SEAL --------------
+article#about section.container:nth-of-type(1) h2 {
+  position: relative; /* Make h2 the containing block */
+}
+
+article#about section.container:nth-of-type(1) h2::after {
+  content: "[   ]"; /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0); /* Hide the text, leaving only the background */
+  background-image: url('images/water.svg');
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  // Seal placement and fixed position over text
+  position: absolute; 
+  right: 45%; 
+  top: 65%; 
+  transform: translateY(-50%); 
+  width: 80px; 
+  height: 80px; 
+}
+// animate it
+article#about section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+// EARTH SEAL --------------
+section.container:nth-of-type(2) h2 {
+  position: relative;
+  font-size: 120%;
+}
+section.container:nth-of-type(2) h2::after {
+  content: "[   ]";
+  text-shadow: none;
+  margin-left: 20%;
+  color: rgba(0, 0, 0, 0);
+  background-image: url('images/earth.svg');
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 45%; 
+  top: 65%; 
+  transform: translateY(-50%); 
+  width: 80px; 
+  height: 80px; 
+}
+// animate first
+section.container:nth-of-type(2):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+// FIRE SEAL --------------
+article#guidelines section.container:nth-of-type(1) h2 {
+  position: relative; /* Make h2 the containing block */
+}
+
+article#guidelines section.container:nth-of-type(1) h2::after {
+  content: "[   ]"; /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0); /* Hide the text, leaving only the background */
+  background-image: url('images/fire.svg');
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  // Seal placement and fixed position over text
+  position: absolute; 
+  right: 45%; 
+  top: 65%; 
+  transform: translateY(-50%); 
+  width: 80px; 
+  height: 80px; 
+}
+// animate it
+article#guidelines section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+// AIR SEAL --------------
+article#contribute section.container:nth-of-type(1) h2 {
+  position: relative; /* Make h2 the containing block */
+}
+
+article#contribute section.container:nth-of-type(1) h2::after {
+  content: "[   ]"; /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0); /* Hide the text, leaving only the background */
+  background-image: url('images/air.svg');
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  // Seal placement and fixed position over text
+  position: absolute; 
+  right: 45%; 
+  top: 65%; 
+  transform: translateY(-50%); 
+  width: 80px; 
+  height: 80px; 
+}
+// animate it
+article#contribute section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+

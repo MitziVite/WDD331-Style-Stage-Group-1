@@ -1,36 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-section.container {
+section.container:has(h2) {
   background-image: url("images/scroll2.png");
-  background-size: 100% 110%;
+  background-size: 90% 110%;
   background-position: top center;
   background-repeat: no-repeat;
   text-align: center;
   list-style: none;
   margin: 40px 20%;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 55px;
 }
 
+/* Ensure the h2 is always visible and triggers the dropdown */
+section.container:has(h2):hover {
+  height: 100%;
+}
+
+/* Specific rule for the h2 to keep it unaffected */
 section.container h2 {
   background-image: url("images/scroll.png");
-  background-size: 100% 110%;
+  background-size: 95% 110%;
   background-position: top center;
   background-repeat: no-repeat;
   margin: 0px;
-  padding-top: 20px;
+  padding: 15px 0px 15px 10%;
   color: white;
-  height: 100%;
-  transition: all 1s;
-}
-section.container h2:hover ~ * {
-  height: 100px;
-  color: black;
-  transition: all 0.5s;
+  text-shadow: 2px 2px 2px black;
+  text-align: left;
+  cursor: pointer;
 }
 
-section.container > * {
-  height: 0px;
-  color: rgba(222, 184, 135, 0);
-  transition: all 0.5s;
-  margin: 0px;
+/* Rule to hide all child elements except h2 initially */
+/* Additional styling for links */
+section.container a {
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section.container:hover section.container a {
+  opacity: 1;
 }
 
 section.container p {
@@ -39,6 +48,117 @@ section.container p {
 
 ul {
   list-style: none;
+}
+
+article#about section.container:nth-of-type(1) h2 {
+  position: relative;
+  /* Make h2 the containing block */
+}
+
+article#about section.container:nth-of-type(1) h2::after {
+  content: "[   ]";
+  /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0);
+  /* Hide the text, leaving only the background */
+  background-image: url("images/water.svg");
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 45%;
+  top: 65%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+article#about section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+section.container:nth-of-type(2) h2 {
+  position: relative;
+  font-size: 120%;
+}
+
+section.container:nth-of-type(2) h2::after {
+  content: "[   ]";
+  text-shadow: none;
+  margin-left: 20%;
+  color: rgba(0, 0, 0, 0);
+  background-image: url("images/earth.svg");
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 45%;
+  top: 65%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+section.container:nth-of-type(2):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+article#guidelines section.container:nth-of-type(1) h2 {
+  position: relative;
+  /* Make h2 the containing block */
+}
+
+article#guidelines section.container:nth-of-type(1) h2::after {
+  content: "[   ]";
+  /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0);
+  /* Hide the text, leaving only the background */
+  background-image: url("images/fire.svg");
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 45%;
+  top: 65%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+article#guidelines section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
+}
+
+article#contribute section.container:nth-of-type(1) h2 {
+  position: relative;
+  /* Make h2 the containing block */
+}
+
+article#contribute section.container:nth-of-type(1) h2::after {
+  content: "[   ]";
+  /* The after pseudo element needs content to appear */
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0);
+  /* Hide the text, leaving only the background */
+  background-image: url("images/air.svg");
+  background-size: 80% 80%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 45%;
+  top: 65%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+article#contribute section.container:nth-of-type(1):hover h2::after {
+  background-size: 60% 60%;
+  transition: background-size 0.3s ease;
 }
 
 html, body {
@@ -146,7 +266,7 @@ header svg {
   font-size: 1rem;
 }
 
-.container a {
+header .container a {
   color: #ddcdc1;
   text-decoration: none;
   font-weight: 600;
