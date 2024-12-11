@@ -329,7 +329,7 @@ h1::after {
 #files h3 {
   position: relative;
   top: -20px;
-  background-color: rgba(143, 120, 86, 0.937254902);
+  background-color: #5d3b09;
   width: 30%;
   margin-left: 50px;
   margin-top: 0;
@@ -359,6 +359,13 @@ h1::after {
   width: 48%;
 }
 
+@media screen and (max-width: 475px) {
+  #files h3 {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 40%;
+  }
+}
 aside {
   background-color: rgb(44, 37, 37);
   margin: 0;
@@ -448,6 +455,26 @@ aside {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 700px) {
+  .features {
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 600px;
+  }
+  .features li > span {
+    width: 200px;
+  }
+  #styles h2 {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .link-allstyles {
+    left: 40%;
+  }
+}
 .profile {
   position: fixed;
   bottom: 0;
@@ -561,6 +588,26 @@ footer p a:link, footer p a:visited {
 
 footer p {
   text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  footer ul {
+    flex-direction: column;
+  }
+  .page-footer li {
+    margin-top: 10px;
+  }
+  footer li a:link {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page-footer::before {
+    background-image: url("images/water_color.svg"), url("images/earth_color.svg"), url("images/air_color.svg"), url("images/fire_color.svg");
+    background-repeat: no-repeat;
+    background-size: 15% auto;
+    background-position: 0% center, 35% center, 70% center, 100% center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,7 +26,7 @@
     h3 {
         position: relative;
         top: -20px;
-        background-color: #8f7856ef;
+        background-color: #5d3b09;
         width: 30%;
         margin-left: 50px;
         margin-top: 0;
@@ -56,4 +56,12 @@
     position: relative;
     right: 55px;
     width: 48%;
+}
+
+@media screen and (max-width: 475px) {
+    #files h3 {
+        padding-top: 10px;
+        padding-bottom:50px;
+        width:40%;
+    }
 }
