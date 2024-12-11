@@ -1,0 +1,14 @@
+@import '../global/reset';
+
+
+article#contribute section.container:nth-of-type(2){
+    background-color: RGBA(143, 120, 86, 0.9);
+   color: $color-text;
+    padding: 30px;
+    margin: 5% 25%;
+    border-radius: 25px;
+}
+
+article#contribute section.container:nth-of-type(2) h3{
+    margin-left: 23px;
+}
