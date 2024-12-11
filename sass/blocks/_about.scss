@@ -5,9 +5,3 @@ h1 {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-h1::after{
-    content: "is FIRE >:)";
-    display: block; 
-    color: white;   
-    margin-left: 10px; 
-}
