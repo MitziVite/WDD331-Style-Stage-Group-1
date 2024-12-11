@@ -408,13 +408,6 @@ h1 {
   /* Prevents the image from repeating */
 }
 
-h1::after {
-  content: "is FIRE >:)";
-  display: block;
-  color: white;
-  margin-left: 10px;
-}
-
 #files {
   background-color: #e8decf;
   padding-bottom: 30px;
