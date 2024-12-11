@@ -1,3 +1,5 @@
+@import '../global/reset';
+
 // Define a variable for the container's expanded height
 $container-expanded-height: 100%; // Replace with desired height or auto for dynamic content
 
@@ -62,12 +64,8 @@ section.container a {
 
 section.container p {
   padding: 0px 20%;
-section.container p {
-  padding: 0px 20%;
 }
 
-ul {
-  list-style: none;
 ul {
   list-style: none;
 }
@@ -184,4 +182,3 @@ article#contribute section.container:nth-of-type(1):hover h2::after {
   background-size: 60% 60%;
   transition: background-size 0.3s ease;
 }
-
