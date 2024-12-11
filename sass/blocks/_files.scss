@@ -13,14 +13,17 @@
         text-align: center;
             padding: 10px;
             margin-top:10px;
-            border: #5d3b094c solid 2px;
             border-radius: 3px;
-            color: $color-nav-text;
+            color: $color-text;
+            border: #5d3b095e solid 2px;
+            background-color: #5d3b0996;
     }
 
     a:hover{
         text-decoration: none;
-        background-color: #5d3b094c;
+        background-color: transparent;
+        border: #5d3b094c solid 2px;
+        color: $color-nav-text;
     }
 
     h3 {
