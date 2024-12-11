@@ -1,5 +1,5 @@
 .page-footer {
-    background-color: rgb(44, 37, 37);
+    background-color: $color-footer-background;
     padding: 60px;
     padding-top: 90px;
     color: #f8f4e3;
@@ -77,4 +77,35 @@ footer p a:link, footer p a:visited {
 }
 footer p {
     text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+    footer ul {
+        flex-direction: column;
+    }
+    .page-footer li {
+        margin-top:10px;
+    }
+
+        footer li a:link {
+            width: 200px;
+        }
+}
+
+@media screen and (max-width: 600px) {
+    .page-footer::before {
+            background-image:
+                url('images/water_color.svg'),
+                url('images/earth_color.svg'),
+                url('images/air_color.svg'),
+                url('images/fire_color.svg');
+    
+            background-repeat: no-repeat;
+            background-size: 15% auto;
+            background-position:
+                calc(0% + 0%) center,
+                calc(0% + 35%) center,
+                calc(0% + 70%) center,
+                calc(0% + 100%) center;
+        }
 }

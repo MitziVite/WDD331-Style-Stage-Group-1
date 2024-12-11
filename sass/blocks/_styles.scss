@@ -1,5 +1,5 @@
 aside {
-    background-color: rgb(44, 37, 37);
+    background-color: $color-footer-background;
     margin:0;
     text-align: center;
     padding: 20px 60px;
@@ -8,10 +8,10 @@ aside {
 .features {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
-    padding: 20px 60px;
-    margin: 0;
+    padding: 20px 0px;
+    margin: 0px 0px;
    
 
     li > span {
@@ -35,6 +35,8 @@ aside {
 
     li {
         border-radius: 3px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     li:nth-child(1) {
@@ -97,3 +99,25 @@ h2 {
 }
 }
 
+@media screen and (max-width: 700px) {
+    .features {
+        flex-direction: column;
+        width: 50%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: 600px;
+    }
+        .features li>span {
+            width: 200px;
+        }
+
+    #styles h2 {
+        margin: 0;
+        margin-bottom:20px;
+    }
+
+        .link-allstyles {
+            left: 40%;
+        }
+}
