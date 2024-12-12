@@ -392,7 +392,7 @@ article#contribute section.container:nth-of-type(2) {
   background-color: RGBA(143, 120, 86, 0.9);
   color: #f8f4e3;
   padding: 30px;
-  margin: 5% 25%;
+  margin: 5% 25% 10%;
   border-radius: 25px;
 }
 
