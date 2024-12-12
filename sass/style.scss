@@ -4,18 +4,13 @@
 // Overrides just need placed prior to the theme import
 // For example:
 // $color-primary: #3a0;
-@import "utilities/theme";
 @import "global/reset";
-@import "utilities/logomark";
-@import "composition/typography";
 @import "composition/layout";
 @import "blocks/header";
 @import "blocks/nav";
 @import "blocks/about";
-@import "blocks/guidelines";
 @import "blocks/contribute";
 @import "blocks/files";
 @import "blocks/styles";
 @import "blocks/profile";
 @import "blocks/footer";
-@import "utilities/links";
